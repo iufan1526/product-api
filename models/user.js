@@ -1,0 +1,34 @@
+import { Model, DataTypes } from 'sequelize';
+import db from '../models/index.cjs';
+
+class User extends Model {
+    static associate(models) {}
+}
+
+User.init(
+    {
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        user_email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        user_password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
+        },
+    },
+    {
+        sequelize: db.sequelize,
+        modelName: 'User',
+        timestamps: false,
+    }
+);
+
+export default User;
