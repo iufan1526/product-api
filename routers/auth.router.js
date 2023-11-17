@@ -56,7 +56,7 @@ router.post('/auth/signup', async (req, res) => {
         return res.status(500).json(ErrorResult.errorServer());
     }
 
-    return res.status(201).json(SuccessResult.successCreate(resultUser, '회원이 정상적으로 등록 완료되었습니다.'));
+    return res.status(201).json(SuccessResult.success(resultUser, '회원이 정상적으로 등록 완료되었습니다.'));
 });
 
 /**

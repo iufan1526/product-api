@@ -1,5 +1,5 @@
 class SuccessResult {
-    static successCreate(data, message) {
+    static success(data, message) {
         return {
             success: true,
             message,

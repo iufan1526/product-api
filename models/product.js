@@ -1,9 +1,12 @@
 import { Model, DataTypes } from 'sequelize';
 import db from '../models/index.cjs';
+import User from './user.js';
 
 class Product extends Model {
     static associate(models) {
-        // define association here
+        Product.belongsTo(User, {
+            foreignKey: 'user_id',
+        });
     }
 }
 

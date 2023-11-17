@@ -54,6 +54,20 @@ class ErrorResult {
             message: '사용자 인증에 실패하였습니다.',
         };
     }
+
+    static errorEmptyProduct() {
+        return {
+            success: false,
+            message: '상품이 존재하지 않습니다.',
+        };
+    }
+
+    static errorNotEqualUser() {
+        return {
+            success: false,
+            message: '유저 정보가 일치하지 않습니다.',
+        };
+    }
 }
 
 export default ErrorResult;

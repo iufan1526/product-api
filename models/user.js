@@ -1,8 +1,13 @@
 import { Model, DataTypes } from 'sequelize';
 import db from '../models/index.cjs';
+import Product from './product.js';
 
 class User extends Model {
-    static associate(models) {}
+    static associate(models) {
+        User.hasMany(Product, {
+            foreignKey: 'user_id',
+        });
+    }
 }
 
 User.init(

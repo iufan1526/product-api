@@ -22,7 +22,6 @@ export default (req, res, next) => {
     }
 
     req.user = resultAuth.userid;
-    console.log(resultAuth.userid);
 
     next();
 };

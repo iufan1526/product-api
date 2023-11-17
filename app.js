@@ -4,6 +4,8 @@ import authRouter from './routers/auth.router.js';
 import userRouter from './routers/user.router.js';
 import productRouter from './routers/product.router.js';
 import authMiddleware from './middlewares/auth.middle.js';
+import User from './models/user.js';
+import Product from './models/product.js';
 
 const app = express();
 const port = 8000;
@@ -16,6 +18,9 @@ db.sequelize
     .catch(err => {
         console.error(err);
     });
+
+User.associate(db);
+Product.associate(db);
 
 app.use(express.json());
 app.use(express.urlencoded());
