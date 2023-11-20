@@ -2,12 +2,12 @@
 - .env 파일에 어떤 환경변수가 추가되어야 하는지 작성합니다.
 - key=value 형태에서 key만 나열합니다. value는 비밀!
 
-MYSQL_HOST
-MYSQL_USERNAME
-MYSQL_PASSWORD
-MYSQL_DATABAE 
-MYSQL_PORT 
-JWT_KEY 
+MYSQL_HOST,
+MYSQL_USERNAME,
+MYSQL_PASSWORD,
+MYSQL_DATABAE ,
+MYSQL_PORT ,
+JWT_KEY ,
 
 # API 명세서 URL
 
