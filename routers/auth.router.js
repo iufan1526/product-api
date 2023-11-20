@@ -78,7 +78,7 @@ router.post('/auth/login', async (req, res) => {
         return res.status(500).json(ErrorResult.errorServer());
     }
 
-    if (selectUser.length === 0) {
+    if (!selectUser) {
         return res.status(400).json(ErrorResult.errorEmptyEmail());
     }
 
